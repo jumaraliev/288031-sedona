@@ -11,11 +11,11 @@
           <li><a href="#">ИНФОРМАЦИЯ</a></li>
           <li><a href="#">ФОТО И ВИДЕО</a></li>
         </ul>
-        <div class="logo"><a href="#"><img src="#" alt="logo" /></a></div>
         <ul>
           <li><a href="#">КАРТА ШТАТА</a></li>
           <li><a href="#">ГОСТИНИЦЫ</a></li>
         </ul>
+        <div class="logo"><a href="#"><img src="#" alt="logo" /></a></div>
       </nav>
     </header>
     <div class="search-form">
@@ -47,7 +47,9 @@
     </div>
     <main>
       <section class="sort">
-        <h3>Найдено</h3>
+        <div class="result">
+          <h3>Найдено</h3>
+        </div>
         <span id="active">Сортировка:</span>
         <ul>
           <li class="active"><a href="#">По цене</a></li>
@@ -55,8 +57,8 @@
           <li><a href="#">По рейтингу</a></li>
         </ul>
         <ul>
-          <li></li>
-          <li></li>
+          <li><a href="#">"<"</a></li>
+          <li><a href="#">">"</a></li>
         </ul>
       </section>
       <section class="hotels">
@@ -65,8 +67,8 @@
             <img src="http://placehold.it/150x100">
           </div>
           <div class="hotel-info">
-            <h1>Amara Resort & spa</h1>
-            <div>
+            <h1><a href="#">Amara Resort & spa</a></h1>
+            <div class="info-price">
               <span>Гостиница</span>
               <span>От 3500 Р.</span>
             </div>
@@ -86,7 +88,7 @@
           </div>
           <div class="hotel-info">
             <h1>Desert Quail Inn</h1>
-            <div>
+            <div class="info-price">
               <span>Мотель</span>
               <span>От 2000 Р.</span>
             </div>
@@ -106,7 +108,7 @@
           </div>
           <div class="hotel-info">
             <h1>Villas at poco diablo</h1>
-            <div>
+            <div class="info-price">
               <span>Апартаменты</span>
               <span>От 4000 Р.</span>
             </div>
