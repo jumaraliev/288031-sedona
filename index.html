@@ -2,110 +2,111 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <script src="https://maps.googleapis.com/maps/api/js">
+    </script>
     <title>Седона</title>
   </head>
   <body>
     <header>
       <nav>
         <ul>
-          <li><a href="#">Иформация</a></li>
-          <li><a href="#">Фото и видео</a></li>
-          <li><a href="#">Карта Штата</a></li>
-          <li><a href="#">Гостиницы</a></li>
+          <li><a href="#">Информация</a></li><li><a href="#">Фото и видео</a></li><li></li><li><a href="#">Карта Штата</a></li><li><a href="#">Гостиницы</a></li>
         </ul>
-        <div class="logo"><a href="#"><img src="#" alt="logo"></a></div>
+        <div class="logo"><a href="#"><img src="img/logo.png" alt="logo"></a></div>
       </nav>
+      <img class="intro-bg" src="img/intro-bg.png" alt="intro-background"/>
     </header>
     <main>
       <section class="main-header">
-        <h2>Седона - небольшой город в Аризоне, заслуживший большего!</h2>
+        <h2>Седона - небольшой город в Аризоне,<br> заслуживший большего!</h2>
         <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
       </section>
       <section class="info-container">
         <div class="info-text">
-          <h2>Настоящий городок</h2>
-          <span class="number">- №1 -</span>
+          <h2>Настоящий<br> городок</h2><br>
           <p>
-            Седона - не атракцион для туристов, там течет своя жизнь
+            <span class="number">- №1 -</span><br><br>
+            Седона - не атракцион для туристов, <br>там течет своя жизнь
           </p>
         </div>
         <div class="info-img">
-          <img src="#" alt="info-img" />
         </div>
       </section>
       <div class="services">
         <div class="service">
-          <img src="#" alt="1" />
+          <img src="img/home..png" alt="1" />
           <h2>ЖИЛЬЕ</h2>
           <p>
-            Рекомендуем пожить в настоящем мотеле, все как в кино!
+            Рекомендуем пожить в настоящем<br> мотеле, все как в кино!
           </p>
         </div>
         <div class="service">
-          <img src="#" alt="1" />
+          <img src="img/hamburger.png" alt="1" />
           <h2>Еда</h2>
           <p>
-            Всегда заказывайте фирменный бургер, вы не разочаруетесь!
+            Всегда заказывайте фирменный бургер,<br> вы не разочаруетесь!
           </p>
         </div>
         <div class="service">
-          <img src="#" alt="1" />
+          <img src="img/gift.png" alt="1" />
           <h2>Сувениры</h2>
           <p>
-            Не только Китайского, но и местного производства!
+            Не только Китайского, но и местного<br> производства!
           </p>
         </div>
       </div>
       <section class="info-container">
-        <div class="info-img">
-          <img src="#" alt="info-img" />
+        <div class="info-img2">
         </div>
         <div class="info-text">
-          <h2>Там есть мост дьявола</h2>
+          <h2>Там есть<br> мост дьявола</h2>
           <span class="number">- №2 -</span>
           <p>
-            Да, по нему можно пройти! если конечно вы осмелитесь
+            Да, по нему можно пройти! если конечно<br> вы осмелитесь
           </p>
         </div>
       </section>
-      <div class="info-container">
+      <div class="info-container2">
         <div class="info-text">
-          <h2>Небольшая площадь</h2>
+          <h2>Небольшая<br> площадь</h2>
           <span>- №3 -</span>
           <p>
-            Все достопримечательности находятся очень близко
+            Все достопримечательности<br> находятся очень близко
           </p>
         </div>
         <div class="info-text">
-          <h2>Красивая дорога</h2>
+          <h2>Красивая<br> дорога</h2>
           <span>- №4 -</span>
           <p>
-            Ехать в Седону из Лас-Вегаса совсем не скучно!
+            Ехать в Седону из Лас-Вегаса совсем<br> не скучно!
           </p>
         </div>
         <div class="info-text">
-          <h2>Мало туристов</h2>
+          <h2>Мало<br> туристов</h2>
           <span>- №5 -</span>
           <p>
-            Большинство едет в Гранд Каньон и толпится там
+            Большинство едет в Гранд Каньон и<br> толпится там
           </p>
         </div>
       </div>
       <section class="modal-header">
         <h3>Заинтересовались?</h3>
         <p>
-          Укажите предпологаемые даты поездки, и мы покажем вам лучшие
+          Укажите предпологаемые даты поездки,<br> и мы покажем вам лучшие
           предложения гостиниц в Седоне
         </p>
         <a href="#">Поиск гостиницы в Седоне</a>
       </section>
+      <div id="map"></div>
       <section class="modal-form">
         <form class="search-hotel" action="#" method="post">
           <label>Дата заезда:<input type="date" name="arrival-date"></label>
           <label>Дата выезда:<input type="date" name="date-of-departure"></label>
-          <label>Взрослые:<input type="number" name="adults"></input></label>
-          <label>Дети:<input type="number" name="children"></input></label>
-          <button type="submit"></button>
+          <label class="width-50">Взрослые:<input type="number" name="adults"></input></label>
+          <label class="width-50">Дети:<input type="number" name="children"></input></label>
+          <button type="submit">Найти</button>
         </form>
       </section>
     </main>
@@ -122,5 +123,17 @@
         <a href="#"><img src="#" alt="logo-academy" /></a>
       </div>
     </footer>
+    <script>
+      function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 34.86974, lng: -111.76099},
+          scrollwheel: false,
+          zoom: 8
+        });
+      }
+
+      initMap();
+
+    </script>
   </body>
 </html>
