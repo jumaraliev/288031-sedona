@@ -97,16 +97,17 @@
           Укажите предпологаемые даты поездки,<br> и мы покажем вам лучшие
           предложения гостиниц в Седоне
         </p>
-        <a href="#">Поиск гостиницы в Седоне</a>
+        <a id="search-button" href="#">Поиск гостиницы в Седоне</a>
       </section>
       <div id="map"></div>
+      <div class="modal-backskin"></div>
       <section class="modal-form">
         <form class="search-hotel" action="#" method="post">
           <label>Дата заезда:<input type="date" name="arrival-date"></label>
           <label>Дата выезда:<input type="date" name="date-of-departure"></label>
           <label class="width-50">Взрослые:<input type="number" name="adults"></input></label>
           <label class="width-50">Дети:<input type="number" name="children"></input></label>
-          <button type="submit">Найти</button>
+          <button id="find-button" type="submit">Найти</button>
         </form>
       </section>
     </main>
@@ -115,12 +116,13 @@
         <a href="#">#Visitsedona</a>
       </div>
       <div class="footer-social">
-        <a href="#">TW</a>
-        <a href="#">FB</a>
-        <a href="#">YT</a>
+        <a href="#"></a>
+        <a href="#"></a>
+        <a href="#"></a>
       </div>
       <div class="footer-autor">
-        <a href="#"><img src="#" alt="logo-academy" /></a>
+        <span>Website by</span>
+        <a href="#"><img src="img/htmlacademy-logo.png" alt="logo-academy" /></a>
       </div>
     </footer>
     <script>
@@ -134,6 +136,39 @@
 
       initMap();
 
+      function hideModal() {
+        var modalForm = document.querySelector(".modal-form"),
+            modalBackskin = document.querySelector(".modal-backskin");
+
+        modalForm.classList.remove('final');
+        modalBackskin.classList.remove('final');
+      }
+
+      function showModal() {
+        var modalForm = document.querySelector(".modal-form"),
+            modalBackskin = document.querySelector(".modal-backskin");
+
+        modalForm.classList.add('final');
+        modalBackskin.classList.add('final');
+      }
+
+      var popup = document.querySelector("#search-button");
+      popup.addEventListener('click', function(e){
+        e.preventDefault();
+
+        var modalForm = document.querySelector(".modal-form");
+        if(modalForm.classList.contains('final'))
+          hideModal();
+        else
+          showModal();
+      });
+
+      var backSkin = document.querySelector('.modal-backskin');
+      backSkin.addEventListener('click', function(e){
+        e.preventDefault();
+
+        hideModal();
+      });
     </script>
   </body>
 </html>
