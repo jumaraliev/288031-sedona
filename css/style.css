@@ -16,7 +16,6 @@ ul, li {
 
 body {
   width: 100%;
-  font-family: sans-serif;
 }
 
 * * {
@@ -57,6 +56,7 @@ header .logo {
   top: 0px;
   left: 40%;
   text-align: center;
+  z-index: 100;
 }
 
 /*END HEADER*/
@@ -360,3 +360,332 @@ footer div {
 }
 
 /*END FOOTER*/
+
+
+/*BEGIN PAGE-INNER*/
+
+div.search-form form {
+  width: 100%;
+  color: white;
+  height: 250px;
+  float: left;
+  background-image: url('../img/inner-bg-image.png');
+  background-size: 118%;
+}
+
+div.search-form form div.infrastructure label, div.search-form form div.property-type label {
+  display: inline-block;
+  margin-top: 20px;
+}
+
+div.search-form form div.infrastructure, div.search-form form div.property-type {
+  float: left;
+}
+
+div.search-form form div.infrastructure {
+  margin-left: 80px;
+}
+
+div.search-form form div.infrastructure, div.search-form form div.property-type {
+  width: 25%;
+}
+
+div.search-form form input[type="checkbox"] {
+  display: none;
+}
+
+div.search-form form label span.checkbox-indicator {
+  display: inline-block;
+  width: 24px;
+  height: 21px;
+  background-image: url('../img/checkbox.png');
+  background-repeat: no-repeat;
+  margin-right: 15px;
+  position: relative;
+  top: 4px;
+}
+
+div.search-form form input[type="checkbox"]:checked + .checkbox-indicator {
+  background-image: url('../img/checkbox-checked.png');
+}
+
+div.search-form form h2 {
+  margin-top: 40px;
+  font-size: 16px;
+  margin-bottom: 0px;
+}
+
+.property-type, .infrastructure, .filter-range {
+  display: inline-block;
+}
+
+.filter-range {
+  width: 330px;
+  margin-left: 100px;
+  margin-top: 40px;
+}
+
+.filter-range-title {
+  margin-bottom: 9px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.price-controls {
+  position: relative;
+  height: 36px;
+  margin-bottom: 20px;
+  font-size: 0;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+}
+
+.price-controls::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2px;
+  height: 22px;
+  background: #ffffff;
+  transform: translate(-50%, -50%);
+}
+
+.price-controls label {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 31px;
+  vertical-align: top;
+  cursor: pointer;
+}
+
+.price-controls .min-price,
+.price-controls .max-price {
+  width: 45%;
+  padding-left: 65px;
+}
+
+.price-controls input {
+  width: 50px;
+  margin: 0;
+  color: inherit;
+  font: inherit;
+  background: none;
+  border: none;
+}
+
+.range-controls {
+  position: relative;
+  margin-bottom: 32px;
+}
+
+.range-controls .scale {
+  height: 2px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.range-controls .bar {
+  width: 80%;
+  height: 2px;
+  background: #ffffff;
+}
+
+.range-toggle {
+  position: absolute;
+  top: -9px;
+  width: 4px;
+  height: 4px;
+  background: #ababab;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+  cursor: pointer;
+}
+
+.range-toggle:hover {
+  background: #1c4f80;
+}
+
+.range-toggle-min {
+  left: 0;
+}
+
+.range-toggle-max {
+  left: 80%;
+}
+
+.btn-transparent {
+  display: block;
+  margin: 0 auto;
+  padding: 6px 35px;
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+  background: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+  cursor: pointer;
+  color: white;
+}
+
+.btn-transparent:hover {
+  color: #000000;
+  background: #ffffff;
+}
+
+section.sort {
+  width: 100%;
+  height: 100px;
+  border-bottom: 1.5px solid #e5e5e5;
+  clear: both;
+}
+
+section.sort > * {
+  float: left;
+}
+
+section.sort h3 {
+  font-size: 26px;
+  margin-top: 30px;
+  margin-left: 80px;
+}
+
+section.sort span {
+  font-weight: bold;
+  line-height: 100px;
+  vertical-align: middle;
+  margin-left: 70px;
+  margin-right: -20px;
+}
+
+section.sort ul li {
+  display: inline-block;
+  line-height: 70px;
+  vertical-align: middle;
+  margin-left: 50px;
+}
+
+section.sort ul li.active a {
+  color: #81b3d2;
+}
+
+section.sort ul:first-of-type li:not(:first-child) a {
+  border-bottom: 1px dotted #81b3d2;
+}
+
+section.sort ul:last-of-type {
+  float: right;
+  margin-right: 80px;
+}
+
+section.sort ul:last-of-type li:first-child a {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-image: url('../img/arrow-up.png');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 100%;
+}
+
+section.sort ul:last-of-type li:last-child a {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-left: -35px;
+  background-image: url('../img/arrow-down.png');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 100%;
+}
+
+article.hotel {
+  width: 100%;
+  height: 160px;
+  border-bottom: 1.5px solid #e5e5e5;
+  clear: both;
+}
+
+article.hotel div {
+  float: left;
+}
+
+article.hotel div.img-container img {
+  margin: 30px;
+  margin-left: 80px;
+}
+
+article.hotel div.hotel-info h1 {
+  margin-top: 22px;
+  margin-bottom: 8px;
+}
+
+article.hotel div.rating {
+  float: right;
+  margin-top: 25px;
+  margin-right: 80px;
+}
+
+article.hotel div.hotel-info div.buttons a {
+  display: inline-block;
+  padding: 5px 15px;
+  color: white;
+  font-weight: bold;
+  margin-top: 13px;
+  margin-right: 5px;
+}
+
+article.hotel:first-of-type div.hotel-info div.info-price span{
+  margin-right: 25px;
+}
+
+article.hotel:nth-of-type(2) div.hotel-info div.info-price span {
+  margin-right: 55px;
+}
+
+article.hotel:last-of-type div.hotel-info div.info-price span{
+  margin-right: 5px;
+}
+
+article.hotel div.hotel-info div.buttons a.more {
+  background-color: #81b3d2;
+}
+
+article.hotel div.hotel-info div.buttons a.book {
+  background-color: #766357;
+}
+
+article.hotel:first-of-type div.rating > span {
+  margin-right: -95px;
+}
+
+article.hotel:last-of-type div.rating > span {
+  margin-right: -75px;
+}
+
+div.rating > span {
+  display: inline-block;
+  padding: 8px 15px;
+  background-color: #f2f2f2;
+  color: #939393;
+  margin-top: 60px;
+  margin-right: -50px;
+}
+
+div.rating div.rating-stars {
+  margin-right: 20px;
+  float: right;
+}
+
+div.rating div.rating-stars span.rating-star {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  padding: 0;
+  background-image: url('../img/star.png');
+  background-repeat: no-repeat;
+}
+
+/*END PAGE-INNER*/
