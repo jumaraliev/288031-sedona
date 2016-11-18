@@ -5,6 +5,10 @@ html, body, div, section, main, header, footer {
   margin: 0px;
 }
 
+html {
+  background-color: #f1f1f1;
+}
+
 a {
   text-decoration: none;
   color: black;
@@ -15,7 +19,9 @@ ul, li {
 }
 
 body {
-  width: 100%;
+  width: 1200px;
+  margin: 0 auto;
+  background: #ffffff;
 }
 
 * * {
@@ -26,15 +32,30 @@ body {
 
 header, main, footer {
   width: 100%;
+  margin: 0px;
 }
 
 main {
   position: relative;
 }
 
+.absolute-background-div {
+  position: absolute;
+  top: 0;
+  left: 75px;
+  width: 1200px;
+  height: 100px;
+  z-index: -1;
+  background-color: white;
+}
+
 /*END GENERAL*/
 
 /*BEGIN HEADER*/
+
+header {
+  background-color: white;
+}
 
 header ul {
   padding: 0px;
@@ -75,7 +96,7 @@ header .logo {
   text-align: center;
   background-color: white;
   position: absolute;
-  top: -240px;
+  top: -213px;
   left: 0px;
   height: 236px;
   padding-top: 35px;
@@ -95,8 +116,8 @@ header .logo {
   background-color: #81b3d2;
   color: white;
   display: inline-block;
-  width: 33%;
-  height: 350px;
+  width: 35%;
+  height: 330px;
   text-align: center;
   padding-top: 60px;
 }
@@ -112,12 +133,13 @@ header .logo {
 
 .info-container .info-img, .info-container .info-img2 {
   display: block;
-  width: 67%;
+  width: 65%;
   height: 350px;
 
 }
 
 .info-container .info-img {
+  height: 330px;
   background-image: url('../img/info-image.png');
   background-repeat: no-repeat;
   background-size: 100% auto;
@@ -127,6 +149,7 @@ header .logo {
   background-image: url('../img/info-image2.png');
   background-repeat: no-repeat;
   background-size: 100% auto;
+  height: 330px;
 }
 
 div.services div.service {
@@ -143,7 +166,7 @@ div.services div.service {
 }
 
 div.info-container2 div.info-text {
-  width: 33%;
+  width: 33.03%;
   float: left;
   height: 300px;
   text-align: center;
