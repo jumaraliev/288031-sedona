@@ -59,23 +59,29 @@ header {
 
 header ul {
   padding: 0px;
+  margin: 0;
+  height: 60px;
+  background-color: white;
 }
 
 header ul li{
-  margin: 0px;
+  margin: 15px 65px;
   padding: 0px;
-  width: 20%;
   display: inline-block;
   text-align: center;
   font-weight: bold;
   font-size: 20px;
 }
 
+.li-2 {
+  margin-right: 200px;
+}
+
 header .logo {
   width: 20%;
   position: absolute;
   top: 0px;
-  left: 40%;
+  left: 40.2%;
   text-align: center;
   z-index: 100;
 }
@@ -233,10 +239,10 @@ section.modal-form {
 section.modal-form {
   /*display: none;*/
   box-sizing: border-box;
-  position: fixed;
+  position: absolute;
   background-color: #ffffff;
-  top: 120px;
-  left: 375px;
+  top: 1668px;
+  left: 25%;
   width: 600px;
   height: 450px;
   margin: auto;
@@ -265,7 +271,7 @@ section.modal-form.final {
 }
 
 .modal-backskin.final {
-  opacity: 0.4;
+  opacity: 0;
   z-index: 1;
 }
 
