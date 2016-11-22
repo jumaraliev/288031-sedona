@@ -149,11 +149,18 @@ main section.container1 {
 .info-container .info-text h2 {
   margin-top: -6px;
   font-size: 19px;
+  line-height: 22px;
+  letter-spacing: 1px;
+}
+
+.info-container .info-text span {
+  margin-top: 8px;
 }
 
 .info-container .info-text p {
   font-size: 14px;
-  margin-top: 10px;
+  margin-top: 22px;
+  line-height: 20px;
 }
 
 .info-container .info-text *{
@@ -173,26 +180,66 @@ main section.container1 {
   background-image: url('../img/info-image.png');
   background-repeat: no-repeat;
   background-size: 100% auto;
-  background-position: 0 50%;
+  background-position: 0 54%;
 }
 
 .info-container .info-img2 {
   background-image: url('../img/info-image2.png');
   background-repeat: no-repeat;
-  background-position: 0 50%;
+  background-position: 4px 55%;
   background-size: 100% auto;
   height: 330px;
 }
 
+div.services div.service:first-of-type img {
+  position: relative;
+  top: -3px;
+  left: 2px;
+}
+
+div.services div.service:nth-of-type(2) img{
+  position: relative;
+  top: -2px;
+  left: 5px;
+}
+
+div.services div.service:last-of-type img{
+  position: relative;
+  top: -7px;
+  left: 10px;
+}
+
 div.services div.service h2 {
   font-size: 20px;
-  margin-top: 23px;
+  margin-top: 20px;
+  margin-left: 4px;
+}
+
+div.services div.service:nth-of-type(2) h2 {
+  margin-top: 21px;
+  position: relative;
+  left: 6px;
+}
+
+div.services div.service:last-of-type h2 {
+  margin-top: 16px;
+  margin-left: 24px;
+
 }
 
 div.services div.service p {
   display: inline-block;
-  margin-top: 5px;
+  margin-top: 6px;
   font-size: 14px;
+}
+
+div.services div.service:nth-of-type(2) p {
+  line-height: 20px;
+  margin-top: 6px;
+}
+
+div.services div.service:last-of-type p {
+  line-height: 19px;
 }
 
 div.services div.service {
@@ -208,6 +255,11 @@ div.services div.service {
   margin-top: -20px;
 }
 
+.container2 div.info-text h2 {
+  margin-top: -10px;
+  margin-left: 3px;
+}
+
 .container2 div.info-img2 {
   height: 255px;
 }
@@ -218,7 +270,7 @@ div.services div.service {
 }
 
 .info-container2 h2 {
-  margin-top: 25px;
+  margin-top: 23px;
   font-size: 20px;
 }
 
@@ -231,9 +283,42 @@ div.info-container2 div.info-text {
   background-color: #eeeeee;
 }
 
+div.info-container2 div.info-text:first-of-type h2 {
+  margin-top: 25px;
+  line-height: 23px;
+}
+
+div.info-container2 div.info-text:nth-of-type(2) h2 {
+  margin-top: 25px;
+  line-height: 22px;
+}
+
+div.info-container2 div.info-text:nth-of-type(3) h2 {
+  line-height: 24px;
+}
+
+div.info-container2 div.info-text:nth-of-type(3) span {
+  display: inline-block;
+  margin-top: 4px;
+}
+
+div.info-container2 div.info-text:nth-of-type(2) span {
+  display: inline-block;
+  margin-top: 5px;
+}
+
+div.info-container2 div.info-text:first-of-type span {
+  display: inline-block;
+  margin-top: 4px;
+}
+
 div.info-container2 div.info-text p {
   font-size: 14px;
   margin-top: 25px;
+}
+
+div.info-container2 div.info-text:nth-of-type(2) p {
+  line-height: 19px;
 }
 
 section.modal-header {
@@ -250,26 +335,27 @@ section.modal-header h3 {
   font-size: 28px;
   font-weight: bold;
   display: inline-block;
-  margin-top: 51px;
-  letter-spacing: 1px;
+  margin-top: 49px;
+  letter-spacing: 1.3px;
 }
 
 section.modal-header p {
   font-size: 13.5px;
-  margin-top: 0;
-  line-height: 22px;
+  margin-top: -4px;
+  line-height: 24px;
+  letter-spacing: 0.3px;
 }
 
 section.modal-header a {
   display: inline-block;
-  width: 570px;
+  width: 568px;
   height: 85px;
   background-color: #766357;
   font-size: 20px;
   font-weight: bold;
   color: #ffffff;
   text-decoration: none;
-  line-height: 90px;
+  line-height: 82px;
   position: relative;
   top: 35px;
   padding-top: -5px;
@@ -279,6 +365,7 @@ section.modal-header a {
   height: 470px;
   position: relative;
   padding-top: -50px;
+  top: -2px;
 }
 
 
@@ -302,7 +389,7 @@ section.modal-form {
   box-sizing: border-box;
   position: absolute;
   background-color: #ffffff;
-  top: 1593px;
+  top: 1589px;
   left: 26.3%;
   width: 570px;
   height: 395px;
@@ -409,7 +496,7 @@ footer {
 
 footer div {
   width: 33%;
-  height: 200px;
+  height: 123px;
   float: left;
   text-align: center;
 }
@@ -420,16 +507,21 @@ footer div {
   font-weight: bold;
   color: black;
   text-decoration: none;
-  margin-top: 47px;
+  margin-top: 45px;
+  margin-left: 7px;
+}
+
+.footer-social a:first-child {
+  margin-left: 13px;
 }
 
 .footer-social a {
   display: inline-block;
-  width: 50px;
-  height: 50px;
+  width: 45px;
+  height: 46px;
   margin: 1.5px;
   background-color: #81b3d2;
-  margin-top: 38px;
+  margin-top: 36px;
 }
 
 .footer-social a:first-child {
@@ -458,6 +550,7 @@ footer div {
 .footer-autor span {
   line-height: 120px;
   vertical-align: middle;
+  margin-left: 15px;
 }
 
 .footer-autor a {
@@ -497,11 +590,13 @@ div.search-form form div.infrastructure {
 
 div.search-form form div.infrastructure h2 {
   font-size: 14px;
+  letter-spacing: 1px;
 }
 
 div.search-form form div.property-type {
   margin-top: -10px;
   margin-left: -43px;
+  letter-spacing: 1px;
 }
 
 div.search-form form div.infrastructure, div.search-form form div.property-type {
@@ -544,6 +639,7 @@ div.search-form form h2 {
 }
 
 .filter-range-title {
+  margin-left: -5px;
   margin-bottom: 9px;
   font-weight: 600;
   font-size: 16px;
@@ -666,16 +762,18 @@ section.sort > * {
 section.sort h3 {
   font-size: 20px;
   margin-top: 28px;
-  margin-left: 80px;
+  margin-left: 75px;
+  letter-spacing: 0.8px;
+
 }
 
 section.sort span {
   font-weight: bold;
   line-height: 86px;
   vertical-align: middle;
-  margin-left: 50px;
+  margin-left: 46px;
   margin-right: -38px;
-  font-size: 13px;
+  font-size: 12px;
 }
 
 section.sort ul li {
@@ -736,8 +834,8 @@ article.hotel:nth-of-type(3) div.img-container {
 }
 
 article.hotel div.img-container img {
-  margin: 30px;
-  margin-left: 80px;
+  margin: 29px;
+  margin-left: 75px;
 }
 
 article.hotel div.hotel-info h1 {
@@ -754,8 +852,9 @@ article.hotel div.rating {
 
 article.hotel div.hotel-info div.buttons a {
   display: inline-block;
-  padding: 5px 15px;
+  padding: 5px 16px;
   color: white;
+  font-size: 14px;
   font-weight: bold;
   margin-top: 13px;
   margin-right: 5px;
@@ -789,17 +888,31 @@ article.hotel:last-of-type div.rating > span {
   margin-right: -75px;
 }
 
+article.hotel:first-of-type div.rating span {
+  margin-top: 43px;
+  margin-right: -85px;
+}
+
+article.hotel:nth-of-type(2) div.rating span {
+  margin-right: -42px;
+}
+
+article.hotel:nth-of-type(3) div.rating span {
+  margin-right: -61px;
+}
+
 div.rating > span {
   display: inline-block;
-  padding: 8px 15px;
+  padding: 5px 12px;
+  font-size: 14px;
   background-color: #f2f2f2;
   color: #939393;
-  margin-top: 60px;
+  margin-top: 65px;
   margin-right: -50px;
 }
 
 div.rating div.rating-stars {
-  margin-right: 20px;
+  margin-right: -10px;
   float: right;
 }
 
