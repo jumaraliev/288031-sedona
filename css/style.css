@@ -40,16 +40,6 @@ main {
   position: relative;
 }
 
-.absolute-background-div {
-  position: absolute;
-  top: 0;
-  left: 75px;
-  width: 1200px;
-  height: 100px;
-  z-index: -1;
-  background-color: white;
-}
-
 /*END GENERAL*/
 
 /*BEGIN HEADER*/
@@ -65,7 +55,7 @@ header ul {
   background-color: white;
 }
 
-header ul li{
+nav li{
   margin: 20px 74px;
   padding: 0px;
   display: inline-block;
@@ -147,29 +137,30 @@ main section.container1 {
   padding-top: 60px;
 }
 
-.info-container .info-text h2 {
+section.info-container h2 {
   margin-top: -6px;
   font-size: 19px;
   line-height: 22px;
   letter-spacing: 1px;
 }
 
-.info-container .info-text span {
+section.info-container span {
   margin-top: 8px;
 }
 
-.info-container .info-text p {
+section.info-container p {
   font-size: 14px;
   margin-top: 22px;
   line-height: 20px;
 }
 
-.info-container .info-text *{
+div.info-text *{
   display: inline-block;
   width: 100%;
 }
 
-.info-container .info-img, .info-container .info-img2 {
+.info-container .info-img,
+.info-container .info-img2 {
   display: block;
   width: 66.5%;
   height: 255px;
@@ -192,54 +183,54 @@ main section.container1 {
   height: 330px;
 }
 
-div.services div.service:first-of-type img {
+div.service:first-of-type img {
   position: relative;
   top: -3px;
   left: 2px;
 }
 
-div.services div.service:nth-of-type(2) img{
+div.service:nth-of-type(2) img{
   position: relative;
   top: -2px;
   left: 5px;
 }
 
-div.services div.service:last-of-type img{
+div.service:last-of-type img{
   position: relative;
   top: -7px;
   left: 10px;
 }
 
-div.services div.service h2 {
+div.service h2 {
   font-size: 20px;
   margin-top: 20px;
   margin-left: 4px;
 }
 
-div.services div.service:nth-of-type(2) h2 {
+div.service:nth-of-type(2) h2 {
   margin-top: 21px;
   position: relative;
   left: 6px;
 }
 
-div.services div.service:last-of-type h2 {
+div.service:last-of-type h2 {
   margin-top: 16px;
   margin-left: 24px;
 
 }
 
-div.services div.service p {
+div.service p {
   display: inline-block;
   margin-top: 6px;
   font-size: 14px;
 }
 
-div.services div.service:nth-of-type(2) p {
+div.service:nth-of-type(2) p {
   line-height: 20px;
   margin-top: 6px;
 }
 
-div.services div.service:last-of-type p {
+div.service:last-of-type p {
   line-height: 19px;
 }
 
@@ -256,7 +247,7 @@ div.services div.service {
   margin-top: -20px;
 }
 
-.container2 div.info-text h2 {
+.container2 h2 {
   margin-top: -10px;
   margin-left: 3px;
 }
@@ -284,41 +275,41 @@ div.info-container2 div.info-text {
   background-color: #eeeeee;
 }
 
-div.info-container2 div.info-text:first-of-type h2 {
+div.info-text1 h2 {
   margin-top: 25px;
   line-height: 23px;
 }
 
-div.info-container2 div.info-text:nth-of-type(2) h2 {
+div.info-text2 h2 {
   margin-top: 25px;
   line-height: 22px;
 }
 
-div.info-container2 div.info-text:nth-of-type(3) h2 {
+div.info-text3 h2 {
   line-height: 24px;
 }
 
-div.info-container2 div.info-text:nth-of-type(3) span {
+div.info-text3 span {
   display: inline-block;
   margin-top: 4px;
 }
 
-div.info-container2 div.info-text:nth-of-type(2) span {
+div.info-text2 span {
   display: inline-block;
   margin-top: 5px;
 }
 
-div.info-container2 div.info-text:first-of-type span {
+div.info-text1 span {
   display: inline-block;
   margin-top: 4px;
 }
 
-div.info-container2 div.info-text p {
+div.info-container2 p {
   font-size: 14px;
   margin-top: 25px;
 }
 
-div.info-container2 div.info-text:nth-of-type(2) p {
+div.info-text2 p {
   line-height: 19px;
 }
 
@@ -442,16 +433,16 @@ section.modal-form label input {
   padding-left: 10px;
 }
 
-section.modal-form label:nth-of-type(2) input {
+label.modal-label:nth-of-type(2) input {
   margin-left: 27px;
 }
 
-section.modal-form label:nth-of-type(3) input {
+label.modal-label:nth-of-type(3) input {
   position: relative;
   left: 7px;
 }
 
-section.modal-form label:nth-of-type(4) input {
+label.modal-label:nth-of-type(4) input {
   position: relative;
   right: 9px;
 }
@@ -460,12 +451,13 @@ section.modal-form label.width-50 {
   width: 230px;
 }
 
-section.modal-form label.width-50 input {
+label.modal-label.width-50 input {
   width: 110px;
   height: 40px;
 }
 
-section.modal-form label:nth-child(3) input, section.modal-form label:nth-child(4) input {
+label.modal-label:nth-child(3) input,
+label.modal-label:nth-child(4) input {
   margin-left: 39px;
 }
 
@@ -579,40 +571,43 @@ div.search-form form {
   background-size: 118%;
 }
 
-div.search-form form div.infrastructure label, div.search-form form div.property-type label {
+div.infrastructure label,
+div.property-type label {
   display: inline-block;
   margin-top: 20px;
 }
 
-div.search-form form div.infrastructure, div.search-form form div.property-type {
+div.search-form div.infrastructure,
+div.search-form div.property-type {
   float: left;
 }
 
-div.search-form form div.infrastructure {
+div.search-form div.infrastructure {
   margin-left: 73px;
   margin-top: -10px;
 }
 
-div.search-form form div.infrastructure h2 {
+div.infrastructure h2 {
   font-size: 14px;
   letter-spacing: 1px;
 }
 
-div.search-form form div.property-type {
+div.search-form div.property-type {
   margin-top: -10px;
   margin-left: -43px;
   letter-spacing: 1px;
 }
 
-div.search-form form div.infrastructure, div.search-form form div.property-type {
+div.search-form div.infrastructure,
+div.search-form div.property-type {
   width: 25%;
 }
 
-div.search-form form input[type="checkbox"] {
+div.search-form input[type="checkbox"] {
   display: none;
 }
 
-div.search-form form label span.checkbox-indicator {
+div.search-form span.checkbox-indicator {
   display: inline-block;
   width: 24px;
   height: 21px;
@@ -623,17 +618,19 @@ div.search-form form label span.checkbox-indicator {
   top: 4px;
 }
 
-div.search-form form input[type="checkbox"]:checked + .checkbox-indicator {
+div.search-form input[type="checkbox"]:checked + .checkbox-indicator {
   background-image: url('../img/checkbox-checked.png');
 }
 
-div.search-form form h2 {
+div.search-form h2 {
   margin-top: 40px;
   font-size: 15px;
   margin-bottom: 0px;
 }
 
-.property-type, .infrastructure, .filter-range {
+.property-type,
+.infrastructure,
+.filter-range {
   display: inline-block;
 }
 
@@ -781,7 +778,7 @@ section.sort span {
   font-size: 12px;
 }
 
-section.sort ul li {
+section.sort li {
   display: inline-block;
   line-height: 55px;
   vertical-align: middle;
@@ -789,11 +786,11 @@ section.sort ul li {
   font-size: 12px;
 }
 
-section.sort ul li.active a {
+li.sort-li.active a {
   color: #81b3d2;
 }
 
-section.sort ul:first-of-type li:not(:first-child) a {
+li.sort-li:not(:first-child) a {
   border-bottom: 1px dotted #81b3d2;
 }
 
@@ -802,7 +799,7 @@ section.sort ul:last-of-type {
   margin-right: 60px;
 }
 
-section.sort ul:last-of-type li:first-child a {
+li.sort-li2:first-child a {
   display: inline-block;
   width: 12px;
   height: 12px;
@@ -812,7 +809,7 @@ section.sort ul:last-of-type li:first-child a {
   background-size: 100%;
 }
 
-section.sort ul:last-of-type li:last-child a {
+li.sort-li2:last-child a {
   display: inline-block;
   width: 12px;
   height: 12px;
@@ -838,12 +835,12 @@ article.hotel:nth-of-type(3) div.img-container {
   height: 150px;
 }
 
-article.hotel div.img-container img {
+article.hotel img {
   margin: 29px;
   margin-left: 75px;
 }
 
-article.hotel div.hotel-info h1 {
+div.hotel-info h1 {
   margin-top: 22px;
   margin-bottom: 8px;
   font-size: 21px;
@@ -855,7 +852,7 @@ article.hotel div.rating {
   margin-right: 80px;
 }
 
-article.hotel div.hotel-info div.buttons a {
+div.hotel-info-buttons.buttons a {
   display: inline-block;
   padding: 5px 16px;
   color: white;
@@ -865,44 +862,44 @@ article.hotel div.hotel-info div.buttons a {
   margin-right: 5px;
 }
 
-article.hotel:first-of-type div.hotel-info div.info-price span{
+div.info-price span {
   margin-right: 25px;
 }
 
-article.hotel:nth-of-type(2) div.hotel-info div.info-price span {
+div.info-price2 span {
   margin-right: 55px;
 }
 
-article.hotel:last-of-type div.hotel-info div.info-price span{
+div.info-price3 span{
   margin-right: 5px;
 }
 
-article.hotel div.hotel-info div.buttons a.more {
+div.hotel-info-buttons.buttons a.more {
   background-color: #81b3d2;
 }
 
-article.hotel div.hotel-info div.buttons a.book {
+div.hotel-info-buttons.buttons a.book {
   background-color: #766357;
 }
 
-article.hotel:first-of-type div.rating > span {
+div.rating.rating1 > span {
   margin-right: -95px;
 }
 
-article.hotel:last-of-type div.rating > span {
+div.rating.rating3 > span {
   margin-right: -75px;
 }
 
-article.hotel:first-of-type div.rating span {
+div.rating.rating1 span {
   margin-top: 43px;
   margin-right: -85px;
 }
 
-article.hotel:nth-of-type(2) div.rating span {
+div.rating.rating2 span {
   margin-right: -42px;
 }
 
-article.hotel:nth-of-type(3) div.rating span {
+div.rating.rating3 span {
   margin-right: -61px;
 }
 
@@ -921,7 +918,7 @@ div.rating div.rating-stars {
   float: right;
 }
 
-div.rating div.rating-stars span.rating-star {
+div.rating span.rating-star {
   display: inline-block;
   width: 18px;
   height: 18px;
