@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
     <script src="https://maps.googleapis.com/maps/api/js">
     </script>
@@ -99,7 +99,7 @@
         </p>
         <a id="search-button" href="#">Поиск гостиницы в Седоне</a>
       </section>
-      <div id="map"></div>
+      <div class="map" id="map"></div>
       <div class="modal-backskin"></div>
       <section class="modal-form">
         <form class="search-hotel" action="#" method="post">
@@ -130,7 +130,13 @@
         var map = new google.maps.Map(document.getElementById('map'), {
           center: {lat: 34.86974, lng: -111.76099},
           scrollwheel: false,
-          zoom: 8
+          zoom: 8,
+          zoomControl: false,
+          mapTypeControl: false,
+          scaleControl: false,
+          streetViewControl: false,
+          rotateControl: false,
+          fullscreenControl: false
         });
       }
 
